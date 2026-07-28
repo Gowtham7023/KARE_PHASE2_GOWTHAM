@@ -32,3 +32,45 @@ public class Main
 		
 	}
 }
+
+
+4)
+import java.util.*;
+public class main{
+    Public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        float f=sc.nextFloat();
+        System.out.println(f);
+    }
+
+}
+
+
+
+5)
+
+import java.util.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        char ch=sc.next().charAt(0);
+        System.out.println("The character is :"+ch);
+    }
+
+}
+
+
+
+6)
+
+import java.util.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        float f=sc.nextFloat();
+        System.out.printf("%.2f",f);
+    }
+
+}
