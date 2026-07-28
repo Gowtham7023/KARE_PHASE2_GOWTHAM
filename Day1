@@ -1,4 +1,4 @@
-1)
+1)print ""
 public class Main
 {
 	public static void main(String[] args) {
@@ -9,11 +9,26 @@ public class Main
 
 
 
-2)
+2) printing : \n
 public class Main
 {
 	public static void main(String[] args) {
 		System.out.println("\\n");
+		
+	}
+}
+
+
+3)take input from user:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int a=sc.nextInt();
+	    int b=sc.nextInt();
+	    System.out.println(a +"\n"+b);
+		
 		
 	}
 }
