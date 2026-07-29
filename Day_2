@@ -173,3 +173,23 @@ public class Main
 	        System.out.println(a+" is EQUALS to "+b);
 	}
 }
+
+
+/*write a java program ton get smallest of three numbers
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner  scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		int c = scanner.nextInt();
+		if(a<b && a<c)
+	        System.out.println(a+" is Smaller");
+	    else if(b<c && b<a)
+	        System.out.println(b+" is Smaller");
+	    else
+	        System.out.println(c+" is Smaller");
+	}
+}
