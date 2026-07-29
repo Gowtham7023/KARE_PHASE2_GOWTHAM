@@ -211,3 +211,20 @@ public class Main
 	        System.out.println("hello");
 	}
 }
+
+
+/*write a java program to check the given is leep year or not
+
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner  scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		if(a%400==0 ||a%4==0 && a%100!=0)
+	        System.out.println("Leap year");
+	    else
+	        System.out.println("not a leap year");
+	}
+}
