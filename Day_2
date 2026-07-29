@@ -95,3 +95,24 @@ public class Main
 	        System.out.println("Odd");
 	}
 }
+
+
+/*write a java program 
+
+i/p                   o/p
+2   2                 2 and 2 are equal
+1   54                1 and 54 are not equal
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner  scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		if(a==b)
+	        System.out.println(a+" and "+b+" are equal");
+	    else
+	        System.out.println(a+" and "+b+" are not equal");
+	}
+}
