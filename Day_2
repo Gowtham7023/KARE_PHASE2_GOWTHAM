@@ -228,3 +228,22 @@ public class Main
 	        System.out.println("not a leap year");
 	}
 }
+
+/*write a java program to check the given railway time is valid or not
+
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner  scanner = new Scanner(System.in);
+		int hour = scanner.nextInt();
+		int min = scanner.nextInt();
+		int sec = scanner.nextInt();
+		if(hour >= 0 && hour < 24 && min >= 0 && min <= 59 && sec >= 0 && sec <= 59){
+		    System.out.println("VALID");
+		}else{
+		    System.out.println("NOT VALID");
+		}
+	}
+}
