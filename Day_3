@@ -385,6 +385,9 @@ public class Main {
                 System.out.println(a-b);
             break;
             case '/':
+                if(b==0)
+                System.out.println("undefined");
+                else
                 System.out.println(a/b);
             break;
             case '*':
