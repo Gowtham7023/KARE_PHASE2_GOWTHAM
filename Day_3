@@ -143,3 +143,32 @@ public class Solution {
             System.out.println("Not a Leap year");
     }
 }
+
+//Write a program to check whether the time is valid or not using conditional construct.
+//Input Format
+//hh:mm:ss
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner  sc = new Scanner(System.in);
+        sc.useDelimiter("[:\\r\\n]+");
+        int hour = sc.nextInt();
+        int min = sc.nextInt();
+        int sec = sc.nextInt();
+        if(hour >= 0 && hour < 24 && min >= 0 && min <= 59 && sec >= 0 && sec <= 59){
+            System.out.println("Valid");
+        }else{
+            System.out.println("Not Valid");
+        }
+    }
+}
+
+//
+
