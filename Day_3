@@ -336,5 +336,33 @@ public class Solution {
     }
 }
 
+//question
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc =new Scanner(System.in);
+        int a=sc.nextInt();
+        switch(a){
+            case 1:
+            System.out.println("CSE");
+            break;
+            case 2:
+            System.out.println("ECE");
+            break;
+            case 3:
+            System.out.println("EEE");
+            break;
+            default:
+            System.out.println("Invalid");
+        }
+        
+        
+    }
+}
+
 
 
