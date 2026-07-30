@@ -1,1 +1,104 @@
+//take two integers and check wheather the no.s are equal or not
+//C-L0-MOD2-Conditional-Challenge-1
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        if(a==b){
+            System.out.println("EQUAL");
+        }
+        else{
+            System.out.println("NOT EQUAL");
+        }
+    }
+}
+
+
+//check even or odd
+//C-L0-MOD2-Conditional-Challenge-2
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if(a%2==0){
+            System.out.println("EVEN");
+        }
+        else{
+            System.out.println("ODD");
+        
+        }
+        
+    }
+}
+
+//positive or negative
+//C-L0-MOD2-Conditional-Challenge-3
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if(a>0){
+            System.out.println("Positive");
+        }
+        else if(a<0){
+            System.out.println("Negative");
+        }
+        else{
+            System.out.println("Zero");
+        
+        }
+    }
+}
+
+//Write a java program to check the number is divisible by 3 or not using conditional construct.
+//C-L0-MOD2-Conditional-Challenge-4
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if(a%3==0){
+            System.out.println("The number is divisible by 3");
+        }
+        else{
+            System.out.println("The number is not divisible by 3 and gives a remainder "+a%3);
+        
+        }
+    }
+}
+
 
