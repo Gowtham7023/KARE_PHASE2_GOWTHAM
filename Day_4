@@ -1,0 +1,68 @@
+//BASE -1 pattern 
+*****
+*****
+*****
+*****
+*****
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int row=0;row<n;row++){
+		    for(int col=0;col<n;col++){
+		        System.out.print("*");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+//BASE -2 pattern 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int row=0;row<n;row++){
+		    for(int col=0;col<=row;col++){
+		        System.out.print("*");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+//BASE3 - pattern 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int row=0;row<n;row++){
+		    for(int col=0;col<n-row;col++){
+		        System.out.print("*");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+//BASE4 - pattern 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int row=0;row<n;row++){
+		    for(int col=0;col<2*row-1;col++){
+		        System.out.print("*");
+		    }
+		    System.out.println();
+		}
+	}
+}
