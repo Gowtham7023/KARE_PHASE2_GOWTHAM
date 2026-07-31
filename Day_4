@@ -145,6 +145,11 @@ public class Main
 // 3 COMBOOS SO WE TAKE 3 FOR LOOPS IN MAIN FOR LOOP
 // FIRST IT IS BASE 2 . SO WE GIVE BASE 2 CONDITION AFTER BASE 3 CONDITION AGAIN AFTER BASE 2
 
+*     *
+**    ** 
+***   ***
+****  ****
+***********
 import java.util.*;
 public class Main
 {
