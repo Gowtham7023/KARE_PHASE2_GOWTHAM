@@ -409,5 +409,61 @@ public class Main
 		
 	}
 }
+//output=5
+12345
+678910
+1112131415
+1617181920
+2122232425
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int count=0;
+		for(int row=0;row<n;row++){
+		    for(int col=0;col<n;col++){
+		        count++;
+		        System.out.print(count);
+		    }
+		    System.out.println();
+		}
+		
+	}
+}
+
+//output:5
+1
+24
+135
+2468
+13579
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int count;
+		for(int row=0;row<n;row++){
+		    if(row%2==0){
+		        count=1;
+		    }
+		    else{
+		        count=2;
+		    }
+		    for(int col=0;col<=row;col++){
+		        
+		        System.out.print(count);
+		        count+=2;
+		    }
+		    System.out.println();
+		}
+		
+	}
+}
 
 
