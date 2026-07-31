@@ -274,3 +274,53 @@ public class Main
 		}
 	}
 }
+
+//
+output=5
+54321
+5432
+543
+54
+5
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int row=0;row<n;row++){
+		    for(int col=0;col<n-row;col++){
+		        System.out.print(n-col);
+		    }
+		    System.out.println();
+		}
+		
+	}
+}
+
+//output=5
+12345
+1234
+123
+12
+1
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int row=0;row<n;row++){
+		    for(int col=0;col<n-row;col++){
+		        System.out.print(col+1);
+		    }
+		    System.out.println();
+		}
+		
+	}
+}
+
+
