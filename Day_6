@@ -57,3 +57,26 @@ public class Main
 		System.out.println("even digit count = "+even);
 }
 }
+
+
+//write a java program to count the prime digits in the given number
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args){ 
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		int d,prime=0;
+		while(n!=0){
+		    d=n%10;
+		    if(d==2 ||d==3 || d==5 || d==7){
+		       prime++;
+		    }
+		    
+		    n=n/10;
+		    }
+		    
+		
+		System.out.println("prime digit count = "+prime);
+}
+}
