@@ -154,3 +154,34 @@ public class Main
 		}
 	}
 }
+
+
+
+// write a java prog to check the given no. is neon no. or not eg.:9
+// step1 : get the user input n=9
+// step2 : find the square of n = 9^2=81
+// step3 : sum of the digits 1+8=9
+// step4 : the given no. n and sum of each digit in a square value both are equal it si consider as neon number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		int s=n*n;
+		int sum=0,d;
+		int temp=n;
+		while(s!=0){
+		    d=s%10;
+		    sum=sum+d;
+		    s=s/10;
+		}
+		if(temp==sum){
+		    System.out.println("neon number");
+		}
+		else{
+		    System.out.println("Not a neon number");
+		}
+	}
+}
