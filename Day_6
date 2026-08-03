@@ -80,3 +80,22 @@ public class Main
 		System.out.println("prime digit count = "+prime);
 }
 }
+
+//write a java program to reverse the number without using right side formation
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args){ 
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		int d,prime=0;
+		while(n!=0){
+		    d=n%10;
+		   
+		    System.out.print(d);
+		    
+		    n=n/10;
+		    }
+		    
+}
+}
