@@ -185,3 +185,34 @@ public class Main
 		}
 	}
 }
+
+
+
+// write a java prog to check the given the perfect no.
+// step1 : get the user input n=6 
+// step2 : find the factor of n including 1 and excluding the given number =1,2,3
+// step3 : sum of the factor sum=1+2+3=6
+// step4 : the given no. n and sum value both are equal it si consider as perfect number
+
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		int count=0;
+		for(int i=1;i<=n/2;i++){
+		    if(n%i==0){
+		        count=count+i;
+		    }
+		    
+		}
+		if(count==n){
+		    System.out.println("perfect numner");
+		}else{
+		    System.out.print("not a perfect number");
+		}
+}
+}
