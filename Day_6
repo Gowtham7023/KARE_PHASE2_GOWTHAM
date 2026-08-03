@@ -124,3 +124,33 @@ public class Main
 		    
 }
 }
+
+
+
+// write a java prog to check the given no. is harshed no. or not eg.:18
+// step1 : get the user input n=18
+// step2 : find the sum of digits sum=9 1+8=9
+// step3 : to check the given no. is completely divisible by sum of the digits 18%9==0
+// step4 : if it is true print harshad number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		int sum=0,d;
+		int temp=n;
+		while(n!=0){
+		    d=n%10;
+		    sum=sum+d;
+		    n=n/10;
+		}
+		if(temp%sum==0){
+		    System.out.println("Harshad number");
+		}
+		else{
+		    System.out.println("Not a Harshad number");
+		}
+	}
+}
