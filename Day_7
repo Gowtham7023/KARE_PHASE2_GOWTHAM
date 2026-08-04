@@ -69,3 +69,40 @@ public class Main
 		}
 	}
 }
+
+
+//  Adam number
+// step 1 : get a input from user n=12
+// step 2 : find the square of the given number sqr=144
+// step 3 : find the reverse of given number rn=21
+// step 4 : find the square of reverse number srn=441
+// step 5 : reverse the square of reverse number rsrn=144
+// step 6 : if sqr==rsrn print("ADAM number")
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		int n = sc.nextInt();
+		int sqr=n*n;
+		int d,rn=0,srn,rsrn=0;
+		while(n!=0){
+		    d=n%10;
+		    rn=rn*10+d;
+		    n=n/10;
+		}
+		
+		 srn=rn*rn;
+		 while(srn!=0){
+		    d=srn%10;
+		    rsrn=rsrn*10+d;
+		    srn=srn/10;
+		}
+		if(sqr==rsrn){
+		    System.out.println("ADAM NUMBER");
+		}else{
+		    System.out.println("NOT AN ADAM NUMBER");
+		}
+		
+	}
+}
