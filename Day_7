@@ -106,3 +106,39 @@ public class Main
 		
 	}
 }
+
+
+//  Amicable pair(220,284),(1184,1210)
+// step 1 : get two input from user n1=220 and n2=284
+// step 2 : s1=find the sum of factors of n1
+// step 3 : s2=find the sum of factors of n2
+// step 4 : compare s1==n2 and s2==n1
+// step 5 : if the condition is true print amicable pair
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+        int s1=0,s2=0;
+        for(int i=1;i<n1;i++){
+            if(n1%i==0){
+                s1=s1+i;
+            }
+        }
+        for(int i=1;i<n2;i++){
+            if(n2%i==0){
+                s2=s2+i;
+            }
+        }
+        if(s1==n2 && s2==n1){
+            System.out.println("Amicable pair");
+        }else{
+            System.out.println("Not an Amicable pair");
+            
+        }
+        
+		
+	}
+}
