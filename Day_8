@@ -76,3 +76,32 @@ public class Main
 		
 	}
 }
+
+
+//replace the given element in the given index and also in the given array
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int index=sc.nextInt();
+		int rp=sc.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++){
+		    arr[i]=sc.nextInt();
+		}
+        if(index>=0 && index<n){
+            arr[index]=rp;
+            for(int i=0;i<n;i++){
+                
+            System.out.print(arr[i]+ " ");
+                
+            }
+        }else{
+            System.out.println(" Cannot Updated");
+        }
+		
+	}
+}
