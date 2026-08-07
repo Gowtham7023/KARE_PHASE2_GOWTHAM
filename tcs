@@ -15,3 +15,37 @@ public class Main
 	}
 }
 
+
+//check Anagram
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String a=sc.nextLine();
+		String b=sc.nextLine();
+		
+		if(a.length()!=b.length()){
+		    System.out.println("Not an Anagram");
+		    return;
+		}
+		int freq[]=new int[256];
+		for(int i=0;i<a.length();i++){
+		    freq[a.charAt(i)]++;
+		    freq[b.charAt(i)]--;
+		}
+		
+		boolean anagram=true;
+		for(int i=0;i<256;i++){
+		    if(freq[i]!=0){
+		        anagram=false;
+		        break;
+		    }
+		}
+		if(anagram){
+		    System.out.println("Anagram");
+		}else{
+		    System.out.println("Not a anagram");
+		}
+	}
+}
