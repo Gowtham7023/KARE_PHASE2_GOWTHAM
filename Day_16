@@ -291,3 +291,491 @@ public class Main
 	    }  
 	}
 }
+
+// 1) Count the number of elements
+// Input:
+// 10 20 30 40 50 -1
+// Output:
+// Number of Elements: 5
+
+import java.util.*;
+
+class Node{
+    int data;
+    Node next;
+    Node previous;
+
+    Node(int d){
+        this.data = d;
+        this.next = null;
+        this.previous = null;
+    }
+}
+
+public class Main
+{
+    Node first;
+
+    void insert(int d){
+        Node n = new Node(d);
+
+        if(first == null){
+            first = n;
+            return;
+        }
+
+        Node temp = first;
+
+        while(temp.next != null){
+            temp = temp.next;
+        }
+
+        temp.next = n;
+        n.previous = temp;
+    }
+
+    void count(){
+        if(first == null){
+            System.out.println("List is empty");
+            return;
+        }
+
+        int count = 0;
+        Node temp = first;
+
+        while(temp != null){
+            count++;
+            temp = temp.next;
+        }
+
+        System.out.println("Number of Elements: " + count);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Main m = new Main();
+
+        int d = sc.nextInt();
+
+        while(d != -1){
+            m.insert(d);
+            d = sc.nextInt();
+        }
+
+        m.count();
+    }
+}
+
+
+// 2) Search an element
+// Input:
+// 10 20 30 40 50 -1
+// 30
+// Output:
+// Element found
+
+import java.util.*;
+
+class Node{
+    int data;
+    Node next;
+    Node previous;
+
+    Node(int d){
+        this.data = d;
+        this.next = null;
+        this.previous = null;
+    }
+}
+
+public class Main
+{
+    Node first;
+
+    void insert(int d){
+        Node n = new Node(d);
+
+        if(first == null){
+            first = n;
+            return;
+        }
+
+        Node temp = first;
+
+        while(temp.next != null){
+            temp = temp.next;
+        }
+
+        temp.next = n;
+        n.previous = temp;
+    }
+
+    void search(){
+        Scanner sc = new Scanner(System.in);
+
+        int target = sc.nextInt();
+        int flag = 0;
+
+        Node temp = first;
+
+        while(temp != null){
+            if(temp.data == target){
+                flag = 1;
+                break;
+            }
+
+            temp = temp.next;
+        }
+
+        if(flag == 1){
+            System.out.println("Element found");
+        }
+        else{
+            System.out.println("Element not found");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Main m = new Main();
+
+        int d = sc.nextInt();
+
+        while(d != -1){
+            m.insert(d);
+            d = sc.nextInt();
+        }
+
+        m.search();
+    }
+}
+
+
+// 3) Count even and odd elements
+// Input:
+// 10 15 20 25 30 -1
+// Output:
+// Even Elements: 3
+// Odd Elements: 2
+
+import java.util.*;
+
+class Node{
+    int data;
+    Node next;
+    Node previous;
+
+    Node(int d){
+        this.data = d;
+        this.next = null;
+        this.previous = null;
+    }
+}
+
+public class Main
+{
+    Node first;
+
+    void insert(int d){
+        Node n = new Node(d);
+
+        if(first == null){
+            first = n;
+            return;
+        }
+
+        Node temp = first;
+
+        while(temp.next != null){
+            temp = temp.next;
+        }
+
+        temp.next = n;
+        n.previous = temp;
+    }
+
+    void count(){
+        int even = 0;
+        int odd = 0;
+
+        Node temp = first;
+
+        while(temp != null){
+            if(temp.data % 2 == 0){
+                even++;
+            }
+            else{
+                odd++;
+            }
+
+            temp = temp.next;
+        }
+
+        System.out.println("Even Elements: " + even);
+        System.out.println("Odd Elements: " + odd);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Main m = new Main();
+
+        int d = sc.nextInt();
+
+        while(d != -1){
+            m.insert(d);
+            d = sc.nextInt();
+        }
+
+        m.count();
+    }
+}
+
+
+// 4) Display the list in reverse
+// Input:
+// 5 10 15 20 -1
+// Output:
+// 20 15 10 5
+
+import java.util.*;
+
+class Node{
+    int data;
+    Node next;
+    Node previous;
+
+    Node(int d){
+        this.data = d;
+        this.next = null;
+        this.previous = null;
+    }
+}
+
+public class Main
+{
+    Node first;
+
+    void insert(int d){
+        Node n = new Node(d);
+
+        if(first == null){
+            first = n;
+            return;
+        }
+
+        Node temp = first;
+
+        while(temp.next != null){
+            temp = temp.next;
+        }
+
+        temp.next = n;
+        n.previous = temp;
+    }
+
+    void reverse(){
+        if(first == null){
+            System.out.println("List is empty");
+            return;
+        }
+
+        Node temp = first;
+
+        while(temp.next != null){
+            temp = temp.next;
+        }
+
+        while(temp != null){
+            System.out.print(temp.data + " ");
+            temp = temp.previous;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Main m = new Main();
+
+        int d = sc.nextInt();
+
+        while(d != -1){
+            m.insert(d);
+            d = sc.nextInt();
+        }
+
+        m.reverse();
+    }
+}
+
+
+// 5) Find the second largest element
+// Input:
+// 10 50 20 40 30 -1
+// Output:
+// Second Largest Element: 40
+
+import java.util.*;
+
+class Node{
+    int data;
+    Node next;
+    Node previous;
+
+    Node(int d){
+        this.data = d;
+        this.next = null;
+        this.previous = null;
+    }
+}
+
+public class Main
+{
+    Node first;
+
+    void insert(int d){
+        Node n = new Node(d);
+
+        if(first == null){
+            first = n;
+            return;
+        }
+
+        Node temp = first;
+
+        while(temp.next != null){
+            temp = temp.next;
+        }
+
+        temp.next = n;
+        n.previous = temp;
+    }
+
+    void secondLargest(){
+        if(first == null){
+            System.out.println("List is empty");
+            return;
+        }
+
+        int largest = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+
+        Node temp = first;
+
+        while(temp != null){
+
+            if(temp.data > largest){
+                second = largest;
+                largest = temp.data;
+            }
+            else if(temp.data > second && temp.data != largest){
+                second = temp.data;
+            }
+
+            temp = temp.next;
+        }
+
+        System.out.println("Second Largest Element: " + second);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Main m = new Main();
+
+        int d = sc.nextInt();
+
+        while(d != -1){
+            m.insert(d);
+            d = sc.nextInt();
+        }
+
+        m.secondLargest();
+    }
+}
+
+
+// 6) Display elements from a given position
+// Input:
+// 10 20 30 40 50 -1
+// 3
+// Output:
+// 30 40 50
+
+import java.util.*;
+
+class Node{
+    int data;
+    Node next;
+    Node previous;
+
+    Node(int d){
+        this.data = d;
+        this.next = null;
+        this.previous = null;
+    }
+}
+
+public class Main
+{
+    Node first;
+
+    void insert(int d){
+        Node n = new Node(d);
+
+        if(first == null){
+            first = n;
+            return;
+        }
+
+        Node temp = first;
+
+        while(temp.next != null){
+            temp = temp.next;
+        }
+
+        temp.next = n;
+        n.previous = temp;
+    }
+
+    void displayFromPosition(){
+        Scanner sc = new Scanner(System.in);
+
+        int position = sc.nextInt();
+
+        Node temp = first;
+        int count = 1;
+
+        while(temp != null && count < position){
+            temp = temp.next;
+            count++;
+        }
+
+        if(temp == null){
+            System.out.println("Invalid Position");
+            return;
+        }
+
+        while(temp != null){
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Main m = new Main();
+
+        int d = sc.nextInt();
+
+        while(d != -1){
+            m.insert(d);
+            d = sc.nextInt();
+        }
+
+        m.displayFromPosition();
+    }
+}
