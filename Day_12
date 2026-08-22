@@ -50,3 +50,384 @@ class Main{
         s.gen3();
     }
 } 
+// 1) Single Inheritance
+
+class Animal
+{
+    void eat(){
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal
+{
+    void bark(){
+        System.out.println("Barking");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
+
+// Output:
+// Eating
+// Barking
+
+
+// 2) Multilevel Inheritance
+
+class GrandFather
+{
+    void money(){
+        System.out.println("Money");
+    }
+}
+
+class Father extends GrandFather
+{
+    void house(){
+        System.out.println("House");
+    }
+}
+
+class Son extends Father
+{
+    void bike(){
+        System.out.println("Bike");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Son s = new Son();
+        s.money();
+        s.house();
+        s.bike();
+    }
+}
+
+// Output:
+// Money
+// House
+// Bike
+
+
+// 3) Hierarchical Inheritance
+
+class Parent
+{
+    void property(){
+        System.out.println("Property");
+    }
+}
+
+class Son extends Parent
+{
+    void car(){
+        System.out.println("Car");
+    }
+}
+
+class Daughter extends Parent
+{
+    void gold(){
+        System.out.println("Gold");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Son s = new Son();
+        Daughter d = new Daughter();
+
+        s.property();
+        s.car();
+
+        d.property();
+        d.gold();
+    }
+}
+
+// Output:
+// Property
+// Car
+// Property
+// Gold
+
+
+// 4) Single Inheritance
+
+class College
+{
+    void education(){
+        System.out.println("Education");
+    }
+}
+
+class Student extends College
+{
+    void exam(){
+        System.out.println("Exam");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Student s = new Student();
+
+        s.exam();
+        s.education();
+    }
+}
+
+// Output:
+// Exam
+// Education
+
+
+// 5) Multilevel Inheritance
+
+class Country
+{
+    void countryName(){
+        System.out.println("India");
+    }
+}
+
+class State extends Country
+{
+    void stateName(){
+        System.out.println("Tamil Nadu");
+    }
+}
+
+class City extends State
+{
+    void cityName(){
+        System.out.println("Chennai");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        City c = new City();
+
+        c.cityName();
+        c.stateName();
+        c.countryName();
+    }
+}
+
+// Output:
+// Chennai
+// Tamil Nadu
+// India
+
+
+// 6) Hierarchical Inheritance
+
+class Vehicle
+{
+    void start(){
+        System.out.println("Vehicle Started");
+    }
+}
+
+class Car extends Vehicle
+{
+    void drive(){
+        System.out.println("Car Driving");
+    }
+}
+
+class Bike extends Vehicle
+{
+    void ride(){
+        System.out.println("Bike Riding");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Car c = new Car();
+        Bike b = new Bike();
+
+        c.start();
+        c.drive();
+
+        b.start();
+        b.ride();
+    }
+}
+
+// Output:
+// Vehicle Started
+// Car Driving
+// Vehicle Started
+// Bike Riding
+
+
+// 7) Multilevel Inheritance
+
+class Company
+{
+    void company(){
+        System.out.println("Google");
+    }
+}
+
+class Employee extends Company
+{
+    void employee(){
+        System.out.println("Employee");
+    }
+}
+
+class Manager extends Employee
+{
+    void manager(){
+        System.out.println("Manager");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Manager m = new Manager();
+
+        m.company();
+        m.manager();
+        m.employee();
+    }
+}
+
+// Output:
+// Google
+// Manager
+// Employee
+
+
+// 8) Single Inheritance
+
+class Mobile
+{
+    void call(){
+        System.out.println("Calling");
+    }
+}
+
+class Smartphone extends Mobile
+{
+    void internet(){
+        System.out.println("Internet");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Smartphone s = new Smartphone();
+
+        s.internet();
+        s.call();
+    }
+}
+
+// Output:
+// Internet
+// Calling
+
+
+// 9) Multilevel Inheritance
+
+class Human
+{
+    void breathe(){
+        System.out.println("Breathing");
+    }
+}
+
+class Student extends Human
+{
+    void study(){
+        System.out.println("Studying");
+    }
+}
+
+class Engineer extends Student
+{
+    void code(){
+        System.out.println("Coding");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Engineer e = new Engineer();
+
+        e.code();
+        e.breathe();
+        e.study();
+    }
+}
+
+// Output:
+// Coding
+// Breathing
+// Studying
+
+
+// 10) Hierarchical Inheritance
+
+class Bank
+{
+    void bankName(){
+        System.out.println("SBI");
+    }
+}
+
+class Savings extends Bank
+{
+    void savings(){
+        System.out.println("Savings Account");
+    }
+}
+
+class Current extends Bank
+{
+    void current(){
+        System.out.println("Current Account");
+    }
+}
+
+class Main
+{
+    public static void main(String args[]){
+        Savings s = new Savings();
+        Current c = new Current();
+
+        s.bankName();
+        c.bankName();
+
+        s.savings();
+        c.current();
+    }
+}
+
+// Output:
+// SBI
+// SBI
+// Savings Account
+// Current Account
