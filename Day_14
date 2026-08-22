@@ -184,3 +184,142 @@ class Main{
         
     } 
 }
+
+// 1) Recursion - Power of a Number
+// Input:
+// 2 5
+// Output:
+// 32
+
+import java.util.*;
+
+public class Main
+{
+    static int power(int a, int b){
+        if(b == 0)
+            return 1;
+
+        return a * power(a, b - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println(power(a, b));
+    }
+}
+
+
+// 2) Constructor Overloading
+// Output:
+// 10
+// 20 ABC
+// 30 XYZ 6.5
+
+import java.util.*;
+
+class Student
+{
+    int rollno;
+    String name;
+    double mark;
+
+    Student(){
+        rollno = 10;
+    }
+
+    Student(int r, String n){
+        rollno = r;
+        name = n;
+    }
+
+    Student(int r, String n, double m){
+        rollno = r;
+        name = n;
+        mark = m;
+    }
+
+    void display(){
+        System.out.println(rollno + " " + name + " " + mark);
+    }
+
+    public static void main(String args[]){
+        Student s1 = new Student();
+        Student s2 = new Student(20, "ABC");
+        Student s3 = new Student(30, "XYZ", 6.5);
+
+        System.out.println(s1.rollno);
+        System.out.println(s2.rollno + " " + s2.name);
+        s3.display();
+    }
+}
+
+
+// 3) Method Overloading
+// Input:
+// 10 20 30
+// Output:
+// 30
+// 200
+// 60
+
+import java.util.*;
+
+class Main
+{
+    void calculate(int a, int b){
+        System.out.println(a + b);
+    }
+
+    void calculate(float a, float b){
+        System.out.println(a * b);
+    }
+
+    void calculate(int a, int b, int c){
+        System.out.println(a + b + c);
+    }
+
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        Main m = new Main();
+
+        m.calculate(a, b);
+        m.calculate((float)a, (float)b);
+        m.calculate(a, b, c);
+    }
+}
+
+
+// 4) Recursion - Sum of Digits
+// Input:
+// 12345
+// Output:
+// 15
+
+import java.util.*;
+
+public class Main
+{
+    static int sum(int n){
+        if(n == 0)
+            return 0;
+
+        return (n % 10) + sum(n / 10);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        System.out.println(sum(n));
+    }
+}
