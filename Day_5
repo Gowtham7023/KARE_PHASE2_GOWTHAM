@@ -205,3 +205,173 @@ public class Main
 		}
 	}
 }
+
+// 12) Hollow Rectangle
+// Input: 5 7
+// Output:
+// *******
+// *     *
+// *     *
+// *     *
+// *******
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        for(int row = 0; row < n; row++) {
+            for(int col = 0; col < m; col++) {
+                if(row == 0 || row == n-1 || col == 0 || col == m-1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// 13) Right-Angled Triangle
+// Input: 5
+// Output:
+// *
+// **
+// ***
+// ****
+// *****
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int row = 0; row < n; row++) {
+            for(int col = 0; col <= row; col++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// 14) Inverted Right-Angled Triangle
+// Input: 5
+// Output:
+// *****
+// ****
+// ***
+// **
+// *
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int row = 0; row < n; row++) {
+            for(int col = 0; col < n-row; col++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// 15) Number Triangle
+// Input: 5
+// Output:
+// 1
+// 12
+// 123
+// 1234
+// 12345
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int row = 0; row < n; row++) {
+            for(int col = 0; col <= row; col++) {
+                System.out.print(col + 1);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// 16) Inverted Number Triangle
+// Input: 5
+// Output:
+// 12345
+// 1234
+// 123
+// 12
+// 1
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int row = 0; row < n; row++) {
+            for(int col = 0; col < n-row; col++) {
+                System.out.print(col + 1);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// 17) X Pattern
+// Input: 7
+// Output:
+// *     *
+//  *   *
+//   * *
+//    *
+//   * *
+//  *   *
+// *     *
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for(int row = 0; row < n; row++) {
+            for(int col = 0; col < n; col++) {
+                if(row == col || row + col == n-1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
